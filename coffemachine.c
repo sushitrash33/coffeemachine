@@ -67,3 +67,9 @@ int main() {
         }
     }
 }
+void displayCoffeeMenu() {
+    printf("coffees :\n");
+    printf("1. espresso - $%.5f\n",espresso_price );
+    printf("2. cappuccino - $%.5f\n",cappuccino_price );
+    printf("3. mocha - $%.5f\n",mocha_price );
+    }
