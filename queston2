@@ -1,0 +1,32 @@
+#include <std.io>
+#include <math.io>
+int main(){
+   int bankbalance=2000;
+   int tobeprocessed_co = 0;
+   int transactions[]={300,200,-200,-150,-50,-2000,400};
+   int numbertrans=0;
+   char iswithordep;
+   printf("enter the nuber of transactions you want :\n");
+   scanf("%d",&)
+   printf("do you want to withdraw or deposit, type withdrawal or deposit\n");
+   scanf("%s\n",&iswithordep);
+    for (int i = 0; i < num_transactions; i++) {
+        int transaction = transactions[i];
+        if (transaction < 0 && -transaction > balance) {
+            printf("transcation invalidas withdrawal amount exceeds balance\n", transaction);
+            tobeprocessed[tobeprocessed_count++] = transaction;  
+            continue;  
+        }
+        balance += transaction; 
+        if (balance == 0) {
+            printf("no further transactions asd balance is 0\n");
+            tobeprocessed[tobeprocessed_co++] = transaction;  
+            break;  
+        }
+    }
+    printf("number of unprocessed transactions that occurred \n");
+    for (int i = 0; i < tobeprocessed_co; i++) {
+        printf("%d ", tobeprocessed[i]);
+    }
+   printf("final balance is %d", balance);
+}
