@@ -1,0 +1,42 @@
+Define Num_teams (number of teams)
+define squad_size (numer of tplayers in the teams)
+
+struct to input in player info 
+typedef struct{ 
+int kitno;
+char name[50];
+date dob;
+char pos[50];
+char club[50];
+}
+
+struct for team info 
+
+typedef struct{
+char name[50];
+int squadsize 20;
+int playingsize;
+}
+
+struct for date of birth
+type def struct{
+int day;
+int month;
+int year;
+}
+
+array for teams 
+
+
+
+
+Menu Prototypes
+
+void dispmenu();
+void enrollclub();
+void addplayer();
+void searchupdate;
+void dispstats;
+void disperror();
+
+int main){
