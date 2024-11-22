@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int isvalidfloat(const char* str) {
+    int dotcount = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == '.') {
+            dotcount++;
+        } else if (!isdigit(str[i]) && (str[i] != '-' || i > 0)) {
+            return 0;
+        }
+    }
+    return (dotcount == 1);
+}
+
+void processfile(const char* inputfile, const char* outputfile) {
+    FILE* infile = fopen(inputfile, "r");
+    if (infile == NULL) {
+        perror("Error opening input file");
+        return;
+    }
+    FILE* outfile = fopen(outputfile, "w");
+    if (outfile == NULL) {
+        perror("Error opening output file");
+        fclose(infile);
+        return;
+    }
+long pos;
+char buffer[100];
+int invalidcount=0;
+while(1){
+    if (fscanf(inputfile,"%s",buffer)!=1){
+        break;
+    }
+}fclose(inputfile);
+fclose(outputfile);
+printf("invalid floats found %d\n",invalidcount);
+}
+int main(){
+    const char *inputfileName="data.txt";
+    const cha *outputfileName="newdata.txt";
+    processfile(inputfileName,outputfileName);
+    return 0;
+
+}
